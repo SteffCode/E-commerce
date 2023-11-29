@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>My Don-Shop</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/MagnificPopup/magnific-popup.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<!--===============================================================================================-->
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body class="animsition">
+	
+	<!-- Header -->
+	{% block header %}{% endblock %}
+		<!-- Header desktop -->
+		<div class="container-menu-desktop">
+			<!-- Topbar -->
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+						Bienvenue chez don-shop, votre boutique de shopping
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="#" class="logo">
+						<a href="{% url 'home' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
+					</a>
+
+					<!-- Menu desktop -->
+					{% block active %}{% endblock %}
+					
+					<!-- Icon header -->
+					{% block iconpc %}{% endblock %}
+				</nav>
+			</div>	
+		</div>
+		
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="{% url 'home' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
+			</div>
+
+			<!-- Icon header -->
+			{% block iconmobile %}{% endblock %}
+			
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+
+
+		<!-- Menu Mobile -->
+		<div class="menu-mobile">
+			<ul class="topbar-mobile">
+				<li>
+					<div class="left-top-bar">
+						Bienvenue chez don-shop, votre boutique de shopping
+					</div>
+				</li>
+			</ul>
+
+			<ul class="main-menu-m">
+				<li>
+					<a href="{% url 'home' %}">Accueil</a>
+					<span class="arrow-main-menu-m">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</span>
+				</li>
+
+				<li>
+					<a href="{% url 'boutique' %}">Boutique</a>
+				</li>
+
+				<li>
+					<a href="{% url 'apropos' %}">A propos</a>
+				</li>
+
+				<li>
+					<a href="{% url 'contact' %}">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Modal Search -->
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="{% static 'images/icons/icon-close2.png' %}" alt="CLOSE">
+				</button>
+
+				<form  class="wrap-search-header flex-w p-l-15">
+					<button class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+					<input class="plh3" type="search" name="search" placeholder="Recherche...">
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<!-- Cart -->
+	{% block panier %}{% endblock %}
+
+{% block contente %}{% endblock %}
+
+<!-- Footer -->
+<footer class="bg3 p-t-75 p-b-32">
+	<div class="container">
+		<div class="row">
+		
+
+			<div class="col-sm-6 col-lg-3 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Nos reseaux
+				</h4>
+
+				<p class="stext-107 cl7 size-201">
+					Des questions? contactez-nous à partir de nos réseaux sociaux ou appelez-nous au (+242)06 669 30 99
+				</p>
+
+				<div class="p-t-27">
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<a target="_blank" href="https://www.facebook.com/profile.php?id=100082416943486&mibexid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+					</a>
+
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<a target="_blank" href="https://www.instagram.com/don_winslie/"><i class="fa fa-instagram"></i></a>
+					</a>
+
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<a target="_blank" href="https://wa.me/242066693099"><i class="fa fa-whatsapp"></i></a>
+					</a>
+				</div>
+			</div>
+			{% block form %}{% endblock %}
+			
+		</div>
+
+		<div class="p-t-40">
+
+			<p class="stext-107 cl6 txt-center">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>de la maison <a href="https://t.me/+HH13bziy8H05Zjk0">Ob.Buss</a> 
+
+			</p>
+		</div>
+	</div>
+</footer>
+
+
+<!-- Back to top -->
+<div class="btn-back-to-top" id="myBtn">
+	<span class="symbol-btn-back-to-top">
+		<i class="zmdi zmdi-chevron-up"></i>
+	</span>
+</div>
+
+<!-- Modal1 -->
+
+{% block js %}{% endblock %}
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!--===============================================================================================-->	
+<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<script>
+	$(".js-select2").each(function(){
+		$(this).select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $(this).next('.dropDownSelect2')
+		});
+	})
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+<script src="{% static 'js/slick-custom.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/parallax100/parallax100.js' %}"></script>
+<script>
+	$('.parallax100').parallax100();
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/MagnificPopup/jquery.magnific-popup.min.js' %}"></script>
+<script>
+	$('.gallery-lb').each(function() { // the containers for all your galleries
+		$(this).magnificPopup({
+			delegate: 'a', // the selector for gallery item
+			type: 'image',
+			gallery: {
+				enabled:true
+			},
+			mainClass: 'mfp-fade'
+		});
+	});
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/sweetalert/sweetalert.min.js' %}"></script>
+<script>
+	$('.js-addwish-b2').on('click', function(e){
+		e.preventDefault();
+	});
+
+	$('.js-addwish-b2').each(function(){
+		var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+		$(this).on('click', function(){
+			swal(nameProduct, "Validé", "success");
+
+			$(this).addClass('js-addedwish-b2');
+			$(this).off('click');
+		});
+	});
+
+	$('.js-addwish-detail').each(function(){
+		var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+		$(this).on('click', function(){
+			swal(nameProduct, "Validé", "success");
+
+			$(this).addClass('js-addedwish-detail');
+			$(this).off('click');
+		});
+	});
+
+	/*---------------------------------------------*/
+
+	$('.js-addcart-detail').each(function(){
+		var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+		$(this).on('click', function(){
+			swal(nameProduct, "is added to cart !", "success");
+		});
+	});
+
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+<script>
+	$('.js-pscroll').each(function(){
+		$(this).css('position','relative');
+		$(this).css('overflow','hidden');
+		var ps = new PerfectScrollbar(this, {
+			wheelSpeed: 1,
+			scrollingThreshold: 1000,
+			wheelPropagation: false,
+		});
+
+		$(window).on('resize', function(){
+			ps.update();
+		})
+	});
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

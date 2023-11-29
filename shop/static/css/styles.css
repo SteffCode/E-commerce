@@ -1,0 +1,64 @@
+.tehhk{
+    color: rgb(0, 56, 56);
+    position: absolute;
+    top: -8px;
+    left: 42px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    z-index: 100000;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.tehhke{
+    color: rgb(0, 56, 56);
+    position: absolute;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    top: -8px;
+    right: 3px;
+    z-index: 100000;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.ikiki{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.acheter{
+    padding: 1px;
+    margin: 1px;
+    border-radius: 3px;
+    background-color: rgb(41, 41, 41);
+    color: aliceblue;
+    border: 1px solid rgb(41, 41, 41);
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.zmdiTK{
+    color: aliceblue;
+}
+.acheter:hover{
+    background-color: aliceblue;
+    transition: all ease-in-out 300ms;
+}
+.zmdiTK:hover{
+    color: black;
+    transition: all ease-in-out 300ms;
+}
+.imageflate{
+    background-image: url(image/bg-01.jpg)
+}
+.slide-01{
+    background-image: url(image/slide-01.jpg)
+}
+.slide-02{
+    background-image: url(image/slide-02.jpg)
+}
+.slide-03{
+    background-image: url(image/slide-03.jpg)
+}
+.tttt{
+    margin-left: 50px;
+}
