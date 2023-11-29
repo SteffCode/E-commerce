@@ -1,2 +1,2 @@
-# E-commerce
-Ma boutique e-commerce
+# E-COMMERCE
+mon site e-commerce
